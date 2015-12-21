@@ -1,0 +1,52 @@
+
+ include "connect.php";
+			//session code started
+			$emailid="abc@123.com";
+            
+            if(isset($_POST['btnLogin']))
+   {
+	   if($_POST['emailid']=='' && $_POST['pwd']=='')
+	   {
+		     echo "Please enter email and password";
+			 die;
+	   }
+	   else
+	   {  
+			$conn = mysqli_connect($servername, $username, $password, $dbname);
+			$emailid=$_POST['emailid'];
+			$pass=$_POST['pass'];
+
+			$sql = "SELECT * FROM customer where email=$emailid and pass=$pass";
+			
+			$result = $conn->query($sql);
+
+			if (count($result) > 0) {
+				      include("config.php");
+					$sql="SELECT `first`, `last`, `email` FROM `customer` WHERE email=$emailid";
+					//$query=mysql_query($sql) or die ('Unable to run query:'. mysql_error());
+					$result1=mysqli_query($conn,$sql);
+					//$row=mysqli_fetch_array($result1);
+					if ($result1)
+					{
+						while ($row=mysqli_fetch_row($result1))
+						{
+					$fname=$row["first"];
+					$lname=$row["last"];
+						}
+					session_start();
+					$_SESSION['fname']=$fname;
+					$_SESSION['lname']=$lname;
+					echo $fname;
+					}
+			
+				
+			//Q
+				header('Location: home.php');
+			} else {
+				header('Location: index.php');
+				echo "Invalid user";die;
+			}
+			$conn->close();
+	   }	   
+	   
+   }

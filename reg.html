@@ -1,0 +1,737 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+	<head>
+	
+	<title>Mobilestore|Home</title>
+
+		<link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+
+		
+		<link href='http://fonts.googleapis.com/css?family=Londrina+Solid|Coda+Caption:800|Open+Sans' rel='stylesheet' type='text/css'>
+	
+	<link rel="stylesheet" href="css/responsiveslides.css">
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>	
+	<script src="js/responsiveslides.min.js"></script>
+	
+	<script>
+		    // You can also use
+ "$(window).load(function()
+ {"
+			    
+$(function () 
+{
+			
+			      // Slideshow 1
+			     
+ $("#slider1").responsiveSlides({
+			        maxwidth: 1600,
+			        speed: 600
+			      });
+			});
+		  </script>
+          <script>function Submit(){
+ var emailRegex = /^[A-Za-z0-9._]*\@[A-Za-z]*\.[A-Za-z]{2,5}$/;
+ var fname = document.form.Name.value,
+  lname = document.form.LastName.value,
+  femail = document.form.Email.value,
+  freemail = document.form.enterEmail.value,
+  fpassword = document.form.Password.value,
+  fmonth = document.form.birthday_month.value,
+  fday = document.form.birthday_day.value,
+  fyear = document.form.birthday_year.value;
+   
+ if( fname == "" )
+   {
+     document.form.Name.focus() ;
+  document.getElementById("errorBox").innerHTML = "enter the first name";
+     return false;
+   }
+ if( lname == "" )
+   {
+     document.form.LastName.focus() ;
+   document.getElementById("errorBox").innerHTML = "enter the last name";
+     return false;
+   }
+    
+   if (femail == "" )
+ {
+  document.form.Email.focus();
+  document.getElementById("errorBox").innerHTML = "enter the email";
+  return false;
+  }else if(!emailRegex.test(femail)){
+  document.form.Email.focus();
+  document.getElementById("errorBox").innerHTML = "enter the valid email";
+  return false;
+  }
+   
+   if (freemail == "" )
+ {
+  document.form.enterEmail.focus();
+  document.getElementById("errorBox").innerHTML = "Re-enter the email";
+  return false;
+  }else if(!emailRegex.test(freemail)){
+  document.form.enterEmail.focus();
+  document.getElementById("errorBox").innerHTML = "Re-enter the valid email";
+  return false;
+  }
+   
+  if(freemail !=  femail){
+   document.form.enterEmail.focus();
+   document.getElementById("errorBox").innerHTML = "emails are not matching, re-enter again";
+   return false;
+   }
+   
+   
+ if(fpassword == "")
+  {
+   document.form.Password.focus();
+   document.getElementById("errorBox").innerHTML = "enter the password";
+   return false;
+  }
+   
+   if (fmonth == "") {
+        document.form.birthday_month.focus();
+  document.getElementById("errorBox").innerHTML = "select the birthday month";
+        return false;
+     }
+  if (fday == "") {
+        document.form.birthday_day.focus();
+  document.getElementById("errorBox").innerHTML = "select the birthday day";
+        return false;
+     }
+  if (fyear == "") {
+        document.form.birthday_year.focus();
+  document.getElementById("errorBox").innerHTML = "select the birthday year";
+        return false;
+     }
+  if(document.form.radiobutton[0].checked == false && document.form.radiobutton[1].checked == false){
+    document.getElementById("errorBox").innerHTML = "select your gender";
+    return false;
+   }
+  if(fname != '' && lname != '' && femail != '' && freemail != '' && fpassword != '' && fmonth != '' && fday != '' && fyear != ''){
+   document.getElementById("errorBox").innerHTML = "form submitted successfully";
+   }
+     
+}</script>  
+	
+</head>
+	
+<body>
+		
+<div class="wrap">
+		<!----start-Header---->
+	
+	<div class="header">
+	
+		<div class="search-bar">
+	
+			<form>
+		
+			
+<input type="text">
+<input type="submit" value="Search" />
+	
+			</form>
+			
+</div>
+			
+<div class="clear"> </div>
+
+			<div class="header-top-nav">
+
+				<ul>
+	
+				<li><a href="reg.html">Register</a></li>
+	
+				<li><a href="logout.html">Login</a></li>
+
+					<li><a href="Del.html">Delivery</a></li>
+
+					<li><a href="Chk.html">Checkout</a></li>
+
+					<li><a href="Acc.html">My account</a></li>
+
+					<li><a href="Cart.html"><span>ShopingCart&nbsp;&nbsp;: </span></a><lable> &nbsp;Noitems</lable></li>
+				</ul>
+	
+		</div>
+		
+	<div class="clear">
+ </div>
+		
+</div>
+		
+</div>
+		
+<div class="clear"> 
+</div>
+		
+<div class="top-header">
+
+			<div class="wrap">
+
+		<!----start-logo---->
+	
+		<div class="logo">
+	
+			<a href="index.html"><img src="images/logo.png" title="logo" /></a>
+
+			</div>
+		<!----end-logo---->
+
+		<!----start-top-nav---->
+		
+<div class="top-nav">
+			
+<ul>
+				
+<li><a href="index.html">Home</a></li>
+	
+			<li><a href="about.html">About</a></li>
+	
+			<li><a href="store.html">Store</a></li>
+
+				<li><a href="store.html">Featured</a></li>
+
+				<li><a href="blog.html">Blog</a></li>
+	
+			<li><a href="contact.html">Contact</a></li>
+
+	  </ul>
+	
+	</div>
+		
+<div class="clear"> 
+</div>
+	
+	</div>
+	
+</div>
+	
+	<!----End-top-nav---->
+	
+	<!----End-Header---->
+	
+<!--start-image-slider---->
+	
+				<div class="wrap">
+
+
+				<!--	<div class="image-slider">
+
+
+						<!-- Slideshow 1 -->
+	
+				   <!-- <ul class="rslides" id="slider1">
+					    
+  <li><img src="images/1.png" alt=""></li>
+	
+				      <li><img src="images/2.png" alt=""></li>
+		
+			      <li><img src="images/1.png" alt=""></li>
+	
+				    </ul>
+		
+				 <!-- Slideshow 2 -->
+	
+				</div>
+
+					<!--End-image-slider---->
+
+					</div>
+		
+    <div class="clear"> </div>
+		
+   <!-- <div class="wrap">
+		
+    <div class="content">
+		
+    	<div class="top-3-grids">
+
+		    		<div class="section group">
+		
+		<div class="grid_1_of_3 images_1_of_3">
+		
+			  <a href="single.html">
+<img src="images/grid-img1.jpg">
+</a>
+			
+		  <h3>dummy text </h3>
+	
+			</div>
+		
+		<div class="grid_1_of_3 images_1_of_3 second">
+
+					   <a href="single.html">
+<img src="images/grid-img2.jpg">
+</a>
+				
+	  <h3> dummy text </h3>
+		
+		</div>
+	
+			<div class="grid_1_of_3 images_1_of_3 theree">
+
+					   <a href="single.html">
+<img src="images/grid-img3.jpg">
+</a>
+		
+			  <h3> dummy text </h3>
+	
+			</div>
+		
+	</div>
+		    
+	</div>
+		   
+ 	
+		    <div class="content-grids">
+	
+	    	<h4>Deals of the day</h4>
+	
+	    	<div class="section group">
+
+				<div class="grid_1_of_4 images_1_of_4 products-info">
+	
+				 <img src="images/m1.jpg">
+
+					 <a href="single.html">dummy text</a>
+
+					 <h3>$260</h3>
+	
+				 <ul>
+			
+		 	<li><a  class="cart" href="single.html">
+ </a></li>
+					
+ 	<li><a  class="i" href="single.html"> 
+</a>
+</li>
+	
+				 	<li><a  class="Compar" href="single.html"> </a></li>
+
+					 
+	<li><a  class="Wishlist" href="single.html"> </a></li>
+	
+				 </ul>
+				
+</div>
+				
+<div class="grid_1_of_4 images_1_of_4 products-info">
+	
+				 <img src="images/m2.jpg">
+					  
+<a href="single.html">dummy text</a>
+		
+			 <h3>$150</h3>
+	
+			 <ul>
+	
+				 	<li><a  class="cart" href="single.html"> </a></li>
+	
+				 	<li><a  class="i" href="single.html"> </a></li>
+	
+				 	<li><a  class="Compar" href="single.html"> </a></li>
+	
+				 	<li><a  class="Wishlist" href="single.html"> </a></li>
+
+					 </ul>
+				</div>
+	
+			<div class="grid_1_of_4 images_1_of_4 products-info">
+	
+				 <img src="images/m7.jpg">
+
+					  <a href="single.html">dummy text</a>
+
+					 <h3>$130</h3>
+		
+			 <ul>
+				
+	 	<li><a  class="cart" href="single.html"> </a></li>
+	
+				 	<li><a  class="i" href="single.html"> </a></li>
+	
+				 	<li><a  class="Compar" href="single.html"> </a></li>
+
+					 	<li><a  class="Wishlist" href="single.html"> </a></li>
+
+					 </ul>
+			
+	</div>
+		
+		<div class="grid_1_of_4 images_1_of_4 products-info">
+	
+				 <img src="images/m4.jpg">
+					  <a href="single.html">dummy text</a>
+					 <h3>$460</h3>
+
+					 <ul>
+
+					 	<li><a  class="cart" href="single.html"> </a></li>
+					 	<li><a  class="i" href="single.html"> </a></li>
+	
+				 	<li><a  class="Compar" href="single.html"> </a></li>
+
+					 	<li><a  class="Wishlist" href="single.html"> </a></li>
+
+					 </ul>
+		
+		</div>
+		
+	</div>
+			
+<div class="section group">
+	
+			<div class="grid_1_of_4 images_1_of_4 products-info">
+	
+				 <img src="images/m2.jpg">
+	
+				 <a href="single.html">dummy text</a>
+	
+				 <h3>$260</h3>
+		
+			 <ul>
+			
+		 	<li><a  class="cart" href="single.html"> </a></li>
+
+					 	<li><a  class="i" href="single.html"> </a></li>
+					 	<li><a  class="Compar" href="single.html"> </a></li>
+	
+				 	<li><a  class="Wishlist" href="single.html"> </a></li>
+
+					 </ul>
+			
+	</div>
+				
+<div class="grid_1_of_4 images_1_of_4 products-info">
+	
+				 <img src="images/m6.jpg">
+
+					  <a href="single.html">dummy text</a>
+
+					 <h3>$100</h3>
+			
+		 <ul>
+					 	
+<li><a  class="cart" href="single.html"> </a></li>
+
+					 	<li><a  class="i" href="single.html"> </a></li>
+
+					 	<li><a  class="Compar" href="single.html"> </a></li>
+	
+				 	<li><a  class="Wishlist" href="single.html"> </a></li>
+	
+				 </ul>
+			
+	</div>
+				
+<div class="grid_1_of_4 images_1_of_4 products-info">
+	
+				 <img src="images/m7.jpg">
+
+					  <a href="single.html">dummy text</a>
+	
+				 <h3>$180</h3>
+				
+	 <ul>
+					 
+	<li><a  class="cart" href="single.html"> </a></li>
+
+					 	<li><a  class="i" href="single.html"> </a></li>
+
+					 	<li><a  class="Compar" href="single.html"> </a></li>
+
+					 	<li><a  class="Wishlist" href="single.html"> </a></li>
+
+					 </ul>
+				
+</div>
+			
+	<div class="grid_1_of_4 images_1_of_4 products-info">
+	
+				 <img src="images/m1.jpg">
+	
+				  <a href="single.html">dummy text</a>
+	
+				 <h3>$140</h3>
+	
+				 <ul>
+		
+			 	<li><a  class="cart" href="single.html"> </a></li>
+
+					 	<li><a  class="i" href="single.html"> </a></li>
+	
+				 	<li><a  class="Compar" href="single.html"> </a></li>
+	
+				 	<li><a  class="Wishlist" href="single.html"> </a></li>
+	
+				 </ul>
+			
+	</div>
+			
+</div>
+		    
+		    
+	</div>
+		    	
+<div class="content-sidebar">
+		
+    		<h4>Categories</h4>
+	
+					<ul>
+							<li><a href="#">Accord Mobiles</a></li>
+	
+						<li><a href="#">Ace Mobile</a></li>
+							<li><a href="#">Acer Mobile</a></li>
+						
+	<li><a href="#">Airfone</a></li>
+					
+		<li><a href="#">Apple</a></li>
+	
+						<li><a href="#">Blackberry</a></li>
+
+							<li><a href="#">Byond Tech</a></li>
+
+							<li><a href="#">Celkon Mobiles</a></li>
+	
+						<li><a href="#">Dell Mobile Phones </a></li>
+	
+						<li><a href="#">Fly Mobile</a></li>
+	
+						<li><a href="#">Fujezone Mobiles </a></li>
+
+							<li><a href="#">HTC</a></li>
+	
+						<li><a href="#">LG Mobiles</a></li>
+
+							<li><a href="#">Longtel Mobile</a></li>
+	
+						<li><a href="#">Maxx</a></li>
+	
+						<li><a href="#">Micromax Mobiles </a></li>
+	
+						<li><a href="#">Samsung Mobiles</a></li>
+
+							<li><a href="#">Sony Ericsson Mobiles</a></li>
+
+	
+						<li><a href="#">Wynncom Mobiles</a></li>
+
+						</ul>
+		  
+  	</div>
+		 
+   </div>
+		    
+<div class="clear"> </div>
+
+		    </div>-->
+            <table cellspacing="50px" cellpadding="20px">
+      <table width="300" border="2"  style="margin:100px 100px 50px 650px" >   
+
+<td><div id="emptyDiv"></div>
+<div id="description"></div>
+<!--container start-->
+<div id="container">
+  <div id="container_body">
+    <div>
+      <h2 class="form_title">User Registration Form </h2>
+      
+    </div>
+    <!--Form  start-->
+    <div id="form_name">
+      <div class="firstnameorlastname">
+       <form name="form" >
+       <div id="errorBox"></div>
+        <input type="text" name="Name" value="" placeholder="First Name"  class="input_name" >
+        <input type="text" name="LastName" value="" placeholder="Last Name" class="input_name" >
+         
+      </div>
+      <div id="email_form">
+        <input type="text" name="Email" value=""  placeholder="Your Email" class="input_email">
+      </div>
+      <div id="Re_email_form">
+        <input type="text" name="enterEmail" value=""  placeholder="Re-enter Email" class="input_Re_email">
+      </div>
+      <div id="password_form">
+        <input type="password" name="Password" value=""  placeholder="New Password" class="input_password" maxlength="8">
+      </div>
+      <!--birthday details start-->
+      <div>
+        <h3 class="birthday_title">Birthday</h3>
+      </div>
+      <div>
+        <select name="birthday_month" >
+          <option value="" selected >Month</option>
+          <option value="1">Jan</option>
+          <option value="2">Feb</option>
+          <option value="3">Mar</option>
+          <option value="4">Apr</option>
+          <option value="5">May</option>
+	  <option value="6">June</option>
+          <option value="7">July</option>
+          <option value="8">August</option>
+          <option value="9">September</option>
+          <option value="10">October</option>
+	  <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
+        &nbsp;&nbsp;
+        <select name="birthday_day" >
+          <option value="" selected>Day</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+ 	  <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+	  <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+ 	  <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+	  <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+ 	  <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+	  <option value="31">31</option>
+        </select>
+        &nbsp;&nbsp;
+        <select name="birthday_year">
+          <option value="" selected>Year</option>
+          <option value="2013">2013</option>
+          <option value="2012">2012</option>
+          <option value="2011">2011</option>
+          <option value="2010">2010</option>
+          <option value="2009">2009</option>
+	  <option value="2008">2008</option>
+          <option value="2007">2007</option>
+          <option value="2006">2006</option>
+          <option value="2005">2005</option>
+	  <option value="2004">2004</option>
+	  <option value="2003">2003</option>
+          <option value="2002">2002</option>
+          <option value="2001">2001</option>
+          <option value="2000">2000</option>
+        </select>
+      </div>
+</br>
+      <!--birthday details ends-->
+ <h3 class="birthday_title">Gender:</h3>
+      <div id="radio_button">
+  <input type="radio" name="radiobutton" value="male">
+        <label >male</label>
+        &nbsp;&nbsp;&nbsp;
+        <input type="radio" name="radiobutton" value="Female">
+        <label >Female</label>
+
+     
+      </div>
+       <div>
+        <p id="sign_user" onClick="Submit()">Sign Up </p>
+      </div>
+     </form>
+    </div>
+    <!--form ends-->
+  </div>
+</div></td>
+
+</table>
+
+		<div class="footer">
+	
+		<div class="wrap">
+	
+		<div class="section group">
+
+				<div class="col_1_of_4 span_1_of_4">
+					<h3>Our Info</h3>
+					<p>dummy text.</p>
+
+				</div>
+	
+			<div class="col_1_of_4 span_1_of_4">
+
+					<h3>Latest-News</h3>
+
+					<p>dummy text.</p>
+
+		
+			<p>dummy text.</p>
+		
+			<p>dummy text.</p>
+
+		  </div>
+	
+			<div class="col_1_of_4 span_1_of_4">
+	
+				<h3>Store Location</h3>
+	
+				<p>dummy text.</p>
+	
+				<h3>Order-online</h3>
+
+					<p>080-1234-56789</p>
+
+					<p>080-1234-56780</p>
+	
+			</div>
+			
+	<div class="col_1_of_4 span_1_of_4 footer-lastgrid">
+
+					<h3>News-Letter</h3>
+
+					<input type="text"><input type="submit" value="go" />
+	
+				<h3>Follow Us:</h3>
+	
+				 <ul>
+	
+				 	<li><a href="#"><img src="images/twitter.png" title="twitter" />Twitter</a></li>
+
+					 	<li><a href="#"><img src="images/facebook.png" title="Facebook" />Facebook</a></li>
+
+					 	<li><a href="#"><img src="images/rss.png" title="Rss" />Rss</a></li>
+
+	    </ul>
+			
+	</div>
+	
+		</div>
+		
+</div>
+		
+	
+	<div class="clear"> </div>
+
+		<div class="wrap">
+	
+	<div class="copy-right">
+	
+		<p>Mobilestore 	 All Rights Reserved | Design By Ashwin|Vijay|Swapnil </p>
+		</div>
+		</div>
+		</div>
+</body>
+</html>
+
